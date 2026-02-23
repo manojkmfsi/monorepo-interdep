@@ -14,12 +14,12 @@
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-      "@monorepo/logger": ["packages/logger/dist"],
-      "@monorepo/utils": ["packages/utils/dist"],
-      "@monorepo/ui-components": ["packages/ui-components/dist"],
-      "@monorepo/api-client": ["packages/api-client/dist"],
-      "@monorepo/form": ["packages/form/dist"],
-      "@monorepo/app": ["packages/app/dist"]
+      "@monoreps/logger": ["packages/logger/dist"],
+      "@monoreps/utils": ["packages/utils/dist"],
+      "@monoreps/ui-components": ["packages/ui-components/dist"],
+      "@monoreps/api-client": ["packages/api-client/dist"],
+      "@monoreps/form": ["packages/form/dist"],
+      "@monoreps/app": ["packages/app/dist"]
     }
   }
 }

@@ -31,11 +31,11 @@
     }
   },
   "dependencies": {
-    "@monorepo/form": "*",
-    "@monorepo/ui-components": "*",
-    "@monorepo/api-client": "*",
-    "@monorepo/logger": "*",
-    "@monorepo/utils": "*"
+    "@monoreps/form": "*",
+    "@monoreps/ui-components": "*",
+    "@monoreps/api-client": "*",
+    "@monoreps/logger": "*",
+    "@monoreps/utils": "*"
   },
   "devDependencies": {
     "@types/node": "^20.11.17",

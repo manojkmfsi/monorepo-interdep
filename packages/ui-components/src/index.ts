@@ -1,5 +1,5 @@
-import { logger } from '@monorepo/logger';
-import { capitalize } from '@monorepo/utils';
+import { logger } from '@monoreps/logger';
+import { capitalize } from '@monoreps/utils';
 
 export interface ComponentProps {
   label: string;

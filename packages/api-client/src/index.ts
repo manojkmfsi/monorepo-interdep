@@ -1,5 +1,5 @@
-import { logger } from '@monorepo/logger';
-import { delay } from '@monorepo/utils';
+import { logger } from '@monoreps/logger';
+import { delay } from '@monoreps/utils';
 
 export interface RequestOptions {
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE';

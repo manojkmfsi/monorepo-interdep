@@ -1,6 +1,6 @@
-import { Button, Input } from '@monorepo/ui-components';
-import { ApiClient } from '@monorepo/api-client';
-import { logger } from '@monorepo/logger';
+import { Button, Input } from '@monoreps/ui-components';
+import { ApiClient } from '@monoreps/api-client';
+import { logger } from '@monoreps/logger';
 
 export interface FormField {
   name: string;

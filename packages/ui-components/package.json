@@ -30,8 +30,8 @@
     ".": "./dist/index.js"
   },
   "dependencies": {
-    "@monorepo/logger": "*",
-    "@monorepo/utils": "*"
+    "@monoreps/logger": "*",
+    "@monoreps/utils": "*"
   },
   "devDependencies": {
     "@types/node": "^20.11.17",

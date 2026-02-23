@@ -32,9 +32,9 @@
     ".": "./dist/index.js"
   },
   "dependencies": {
-    "@monorepo/ui-components": "*",
-    "@monorepo/api-client": "*",
-    "@monorepo/logger": "*"
+    "@monoreps/ui-components": "*",
+    "@monoreps/api-client": "*",
+    "@monoreps/logger": "*"
   },
   "devDependencies": {
     "@types/node": "^20.11.17",

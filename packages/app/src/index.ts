@@ -1,6 +1,6 @@
-import { Form } from '@monorepo/form';
-import { logger } from '@monorepo/logger';
-import { formatDate } from '@monorepo/utils';
+import { Form } from '@monoreps/form';
+import { logger } from '@monoreps/logger';
+import { formatDate } from '@monoreps/utils';
 
 export class Application {
   private forms: Map<string, Form> = new Map();
