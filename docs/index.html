@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monorepo Documentation</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      color: white;
+      margin-bottom: 50px;
+      padding-top: 40px;
+    }
+    
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    header p {
+      font-size: 1.2em;
+      opacity: 0.95;
+    }
+    
+    .docs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-bottom: 50px;
+    }
+    
+    .doc-card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .doc-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    }
+    
+    .doc-card .icon {
+      font-size: 3em;
+      margin-bottom: 15px;
+    }
+    
+    .doc-card h3 {
+      color: #333;
+      margin-bottom: 10px;
+      font-size: 1.5em;
+    }
+    
+    .doc-card p {
+      color: #666;
+      line-height: 1.6;
+      flex-grow: 1;
+      margin-bottom: 15px;
+    }
+    
+    .doc-card .read-more {
+      color: #667eea;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .doc-card .read-more::after {
+      content: "→";
+      transition: transform 0.3s;
+    }
+    
+    .doc-card:hover .read-more::after {
+      transform: translateX(5px);
+    }
+    
+    footer {
+      text-align: center;
+      color: white;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      opacity: 0.85;
+    }
+    
+    .quick-links {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 30px;
+      color: white;
+    }
+    
+    .quick-links h3 {
+      margin-bottom: 15px;
+    }
+    
+    .quick-links a {
+      display: inline-block;
+      margin-right: 20px;
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 15px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    
+    .quick-links a:hover {
+      background: rgba(255,255,255,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📚 Monorepo Documentation</h1>
+      <p>A comprehensive monorepo with interdependent packages and automated CI/CD pipelines</p>
+    </header>
+    
+    <div class="docs-grid">
+      <a href="README.html" class="doc-card">
+        <div class="icon">📖</div>
+        <h3>README</h3>
+        <p>Overview of the monorepo structure, installation instructions, and available commands.</p>
+        <span class="read-more">Read more</span>
+      </a>
+      
+      <a href="ARCHITECTURE.html" class="doc-card">
+        <div class="icon">🏗️</div>
+        <h3>Architecture</h3>
+        <p>Detailed explanation of the project architecture and dependency hierarchy.</p>
+        <span class="read-more">Read more</span>
+      </a>
+      
+      <a href="QUICKSTART.html" class="doc-card">
+        <div class="icon">⚡</div>
+        <h3>Quick Start</h3>
+        <p>Get started quickly with setup instructions and first steps.</p>
+        <span class="read-more">Read more</span>
+      </a>
+      
+      <a href="CONTRIBUTING.html" class="doc-card">
+        <div class="icon">🤝</div>
+        <h3>Contributing</h3>
+        <p>Guidelines for contributing to the project and managing changes with changesets.</p>
+        <span class="read-more">Read more</span>
+      </a>
+    </div>
+    
+    <div class="quick-links">
+      <h3>🔗 Quick Links</h3>
+      <a href="https://github.com/manojkmfsi/monorepo-interdep" target="_blank">GitHub Repository</a>
+      <a href="https://github.com/manojkmfsi/monorepo-interdep/releases" target="_blank">Releases</a>
+      <a href="https://www.npmjs.com/search?q=%40monorepo" target="_blank">NPM Packages</a>
+    </div>
+    
+    <footer>
+      <p>&copy; 2026 Monorepo Project. All rights reserved.</p>
+      <p>Generated with GitHub Pages and automated CI/CD</p>
+    </footer>
+  </div>
+</body>
+</html>

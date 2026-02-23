@@ -2,10 +2,15 @@
   "name": "@monorepo/app",
   "version": "1.0.0",
   "main": "dist/index.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "scripts": {
     "build": "wireit",
     "dev": "npm run build && node dist/index.js",
-    "test": "node --test **/*.test.js"
+    "test": "node --test **/*.test.js",
+    "test:types": "tsc --noEmit"
   },
   "wireit": {
     "build": {
