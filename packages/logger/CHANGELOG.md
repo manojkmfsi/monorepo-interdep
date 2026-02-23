@@ -1,5 +1,11 @@
 # @monorepo/logger
 
+## 1.0.2
+
+### Patch Changes
+
+- 0459d17: dssszczcSdxsadszxcxzcxzc
+
 ## 1.0.1
 
 ### Patch Changes
