@@ -1,6 +1,6 @@
 {
   "name": "@monoreps/api-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "description": "api-client desc",
@@ -20,7 +20,9 @@
         "src/**/*.ts",
         "tsconfig.json"
       ],
-      "output": ["dist/**"],
+      "output": [
+        "dist/**"
+      ],
       "dependencies": [
         "../logger:build",
         "../utils:build"
