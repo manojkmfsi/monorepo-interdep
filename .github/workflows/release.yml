@@ -23,20 +23,26 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # 1. Add pnpm setup
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
+          cache: 'pnpm' # Change cache to pnpm
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile # Use pnpm install
 
       - name: Build packages
-        run: npm run build --workspaces --if-present
-        
+        run: pnpm run build --filter="..." # Adjust filters if necessary
+
       - name: Run tests
-        run: npm run test --workspaces --if-present
+        run: pnpm run test
 
   release:
     needs: test
@@ -47,15 +53,21 @@ jobs:
         with:
           fetch-depth: 0
 
+      # 1. Add pnpm setup here too
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
+          cache: 'pnpm'
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Configure git
         run: |
@@ -63,14 +75,15 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Build packages
-        run: npm run build --workspaces --if-present
+        run: pnpm run build
 
       - name: Create Release Pull Request or Publish
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: npm run changeset:publish
-          version: npm run changeset:version
+          # Changesets will now find the pnpm binary it needs
+          publish: pnpm run changeset:publish
+          version: pnpm run changeset:version
           commit: "chore: bump package versions"
           title: "chore: bump package versions"
         env:
@@ -82,6 +95,5 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           generate_release_notes: true
-          files: CHANGELOG.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
