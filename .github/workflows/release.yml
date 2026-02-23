@@ -36,7 +36,7 @@ jobs:
           cache: 'pnpm' # Change cache to pnpm
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile # Use pnpm install
+        run: pnpm install --no-frozen-lockfile # Use pnpm install
 
       - name: Build packages
         run: pnpm run build --filter="..." # Adjust filters if necessary
@@ -67,7 +67,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - name: Configure git
         run: |

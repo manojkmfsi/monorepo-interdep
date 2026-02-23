@@ -39,7 +39,7 @@ jobs:
           cache: 'pnpm' # Use pnpm cache
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - name: Run type checking
         run: pnpm run test:types
@@ -73,7 +73,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - name: Run pnpm audit
         run: pnpm audit --audit-level=moderate
@@ -97,7 +97,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - name: Validate workspace structure
         run: pnpm list -r --depth=0

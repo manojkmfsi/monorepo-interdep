@@ -6,7 +6,7 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
-  "description": "test",
+  "description": "test1",
   "scripts": {
     "build": "wireit",
     "dev": "npm run build && node dist/index.js",
