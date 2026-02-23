@@ -76,7 +76,13 @@ jobs:
 
       - name: Build packages
         run: pnpm run build
-
+      - name: Authenticate with NPM
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+          npm whoami
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          
       - name: Create Release Pull Request or Publish
         id: changesets
         uses: changesets/action@v1
