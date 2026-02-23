@@ -1,6 +1,6 @@
 {
   "name": "@monoreps/app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -20,7 +20,9 @@
         "src/**/*.ts",
         "tsconfig.json"
       ],
-      "output": ["dist/**"],
+      "output": [
+        "dist/**"
+      ],
       "dependencies": [
         "../form:build",
         "../ui-components:build",
