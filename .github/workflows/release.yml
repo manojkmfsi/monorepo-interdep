@@ -76,7 +76,7 @@ jobs:
 
       - name: Build packages
         run: pnpm run build
-        
+
       - name: Authenticate with NPM
         run: |
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
@@ -97,10 +97,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Create GitHub Release
-        if: steps.changesets.outputs.published == 'true'
-        uses: softprops/action-gh-release@v1
-        with:
-          generate_release_notes: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Create GitHub Release
+      #   if: steps.changesets.outputs.published == 'true'
+      #   uses: softprops/action-gh-release@v1
+      #   with:
+      #     generate_release_notes: true
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
