@@ -1,0 +1,29 @@
+{
+  "name": "@monorepo/logger",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "wireit",
+    "test": "node --test **/*.test.js",
+    "test:types": "tsc --noEmit"
+  },
+  "wireit": {
+    "build": {
+      "command": "tsc",
+      "files": [
+        "src/**/*.ts",
+        "tsconfig.json"
+      ],
+      "output": ["dist/**"]
+    }
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "typescript": "^5.3.3",
+    "wireit": "^0.14.4"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020"],
+    "declaration": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@monorepo/logger": ["packages/logger/dist"],
+      "@monorepo/utils": ["packages/utils/dist"],
+      "@monorepo/ui-components": ["packages/ui-components/dist"],
+      "@monorepo/api-client": ["packages/api-client/dist"],
+      "@monorepo/form": ["packages/form/dist"],
+      "@monorepo/app": ["packages/app/dist"]
+    }
+  }
+}

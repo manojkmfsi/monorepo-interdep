@@ -1,0 +1,36 @@
+{
+  "name": "@monorepo/api-client",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "wireit",
+    "test": "node --test **/*.test.js"
+  },
+  "wireit": {
+    "build": {
+      "command": "tsc",
+      "files": [
+        "src/**/*.ts",
+        "tsconfig.json"
+      ],
+      "output": ["dist/**"],
+      "dependencies": [
+        "../logger:build",
+        "../utils:build"
+      ]
+    }
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "dependencies": {
+    "@monorepo/logger": "*",
+    "@monorepo/utils": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "typescript": "^5.3.3",
+    "wireit": "^0.14.4"
+  }
+}

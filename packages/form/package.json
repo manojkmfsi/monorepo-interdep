@@ -1,0 +1,38 @@
+{
+  "name": "@monorepo/form",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "wireit",
+    "test": "node --test **/*.test.js"
+  },
+  "wireit": {
+    "build": {
+      "command": "tsc",
+      "files": [
+        "src/**/*.ts",
+        "tsconfig.json"
+      ],
+      "output": ["dist/**"],
+      "dependencies": [
+        "../ui-components:build",
+        "../api-client:build",
+        "../logger:build"
+      ]
+    }
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "dependencies": {
+    "@monorepo/ui-components": "*",
+    "@monorepo/api-client": "*",
+    "@monorepo/logger": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "typescript": "^5.3.3",
+    "wireit": "^0.14.4"
+  }
+}
