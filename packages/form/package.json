@@ -1,5 +1,5 @@
 {
-  "name": "@monorepo/form",
+  "name": "@monoreps/form",
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -7,6 +7,7 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
+  "private": true,
   "scripts": {
     "build": "wireit",
     "test": "node --test **/*.test.js",
