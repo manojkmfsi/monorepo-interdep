@@ -1,5 +1,13 @@
 # @monoreps/api-client
 
+## 1.0.3
+
+### Patch Changes
+
+- fb3552c: bnmn,mn,mn,,mm,,mn,mn,m,m,
+- Updated dependencies [fb3552c]
+  - @monoreps/logger@1.0.3
+
 ## 1.0.2
 
 ### Patch Changes
