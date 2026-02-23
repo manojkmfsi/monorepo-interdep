@@ -32,11 +32,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run tests
-        run: npm run test --workspaces --if-present
-
       - name: Build packages
         run: npm run build --workspaces --if-present
+        
+      - name: Run tests
+        run: npm run test --workspaces --if-present
 
   release:
     needs: test
