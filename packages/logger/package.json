@@ -19,7 +19,9 @@
         "src/**/*.ts",
         "tsconfig.json"
       ],
-      "output": ["dist/**"]
+      "output": [
+        "dist/**"
+      ]
     }
   },
   "exports": {
