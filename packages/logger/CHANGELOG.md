@@ -1,5 +1,11 @@
 # @monorepo/logger
 
+## 1.0.4
+
+### Patch Changes
+
+- 3badba9: cbvnbvnbvnbvnb
+
 ## 1.0.3
 
 ### Patch Changes
