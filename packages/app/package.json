@@ -33,7 +33,7 @@
     }
   },
   "dependencies": {
-    "@monoreps/form": "*",
+    "@monoreps/form": "workspace:*",
     "@monoreps/ui-components": "*",
     "@monoreps/api-client": "*",
     "@monoreps/logger": "*",
