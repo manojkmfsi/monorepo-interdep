@@ -1,5 +1,13 @@
 # @monoreps/ui-components
 
+## 1.0.2
+
+### Patch Changes
+
+- 3badba9: cbvnbvnbvnbvnb
+- Updated dependencies [3badba9]
+  - @monoreps/logger@1.0.4
+
 ## 1.0.1
 
 ### Patch Changes
