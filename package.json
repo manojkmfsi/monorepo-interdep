@@ -13,9 +13,6 @@
     "dev": "npm run dev --workspaces --if-present",
     "lint": "echo 'No linter configured'",
     "changeset": "changeset",
-    "changeset:add": "changeset add",
-    "changeset:version": "changeset version",
-    "changeset:publish": "changeset publish",
     "clean": "rm -rf packages/*/dist packages/*/node_modules && npm ci"
   },
   "devDependencies": {
