@@ -87,12 +87,12 @@ jobs:
       - name: Create Release Pull Request or Publish
         id: changesets
         uses: changesets/action@v1
-        with:
-          # Changesets will now find the pnpm binary it needs
-          publish: pnpm run changeset:publish
-          version: pnpm run changeset:version
-          commit: "chore: bump package versions"
-          title: "chore: bump package versions"
+        # with:
+        #   # Changesets will now find the pnpm binary it needs
+        #   publish: pnpm run changeset:publish
+        #   version: pnpm run changeset:version
+        #   commit: "chore: bump package versions"
+        #   title: "chore: bump package versions"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
