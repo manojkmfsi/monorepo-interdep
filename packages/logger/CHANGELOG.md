@@ -1,5 +1,11 @@
 # @monorepo/logger
 
+## 1.0.5
+
+### Patch Changes
+
+- f86855c: updated version in monorepo
+
 ## 1.0.4
 
 ### Patch Changes
